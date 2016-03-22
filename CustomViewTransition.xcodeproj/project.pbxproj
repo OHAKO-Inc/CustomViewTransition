@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		E3C984931CA14653000FB3BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984921CA14653000FB3BF /* AppDelegate.swift */; };
-		E3C984951CA14653000FB3BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984941CA14653000FB3BF /* ViewController.swift */; };
 		E3C984981CA14653000FB3BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C984961CA14653000FB3BF /* Main.storyboard */; };
 		E3C9849A1CA14654000FB3BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C984991CA14654000FB3BF /* Assets.xcassets */; };
 		E3C9849D1CA14654000FB3BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C9849B1CA14654000FB3BF /* LaunchScreen.storyboard */; };
 		E3C984A81CA14654000FB3BF /* CustomViewTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984A71CA14654000FB3BF /* CustomViewTransitionTests.swift */; };
 		E3C984B31CA14654000FB3BF /* CustomViewTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984B21CA14654000FB3BF /* CustomViewTransitionUITests.swift */; };
+		E3C984C21CA146FD000FB3BF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984C11CA146FD000FB3BF /* MainViewController.swift */; };
+		E3C984C41CA14718000FB3BF /* RightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984C31CA14718000FB3BF /* RightViewController.swift */; };
+		E3C984C61CA14724000FB3BF /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984C51CA14724000FB3BF /* LeftViewController.swift */; };
+		E3C984C91CA147DD000FB3BF /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984C81CA147DD000FB3BF /* StoryboardInstantiable.swift */; };
+		E3C984CE1CA14866000FB3BF /* RightViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3C984CD1CA14866000FB3BF /* RightViewController.storyboard */; };
+		E3C984D01CA1491B000FB3BF /* RightPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C984CF1CA1491B000FB3BF /* RightPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,6 @@
 /* Begin PBXFileReference section */
 		E3C9848F1CA14653000FB3BF /* CustomViewTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C984921CA14653000FB3BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3C984941CA14653000FB3BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E3C984971CA14653000FB3BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3C984991CA14654000FB3BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C9849C1CA14654000FB3BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,12 @@
 		E3C984AE1CA14654000FB3BF /* CustomViewTransitionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomViewTransitionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C984B21CA14654000FB3BF /* CustomViewTransitionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewTransitionUITests.swift; sourceTree = "<group>"; };
 		E3C984B41CA14654000FB3BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3C984C11CA146FD000FB3BF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E3C984C31CA14718000FB3BF /* RightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewController.swift; sourceTree = "<group>"; };
+		E3C984C51CA14724000FB3BF /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		E3C984C81CA147DD000FB3BF /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		E3C984CD1CA14866000FB3BF /* RightViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RightViewController.storyboard; sourceTree = "<group>"; };
+		E3C984CF1CA1491B000FB3BF /* RightPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				E3C984921CA14653000FB3BF /* AppDelegate.swift */,
-				E3C984941CA14653000FB3BF /* ViewController.swift */,
 				E3C984961CA14653000FB3BF /* Main.storyboard */,
+				E3C984C01CA146DC000FB3BF /* ViewControllers */,
+				E3C984C71CA147CB000FB3BF /* Utilities */,
 				E3C984991CA14654000FB3BF /* Assets.xcassets */,
 				E3C9849B1CA14654000FB3BF /* LaunchScreen.storyboard */,
 				E3C9849E1CA14654000FB3BF /* Info.plist */,
@@ -123,6 +134,50 @@
 				E3C984B41CA14654000FB3BF /* Info.plist */,
 			);
 			path = CustomViewTransitionUITests;
+			sourceTree = "<group>";
+		};
+		E3C984C01CA146DC000FB3BF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3C984CA1CA1482C000FB3BF /* Main */,
+				E3C984CB1CA14834000FB3BF /* Right */,
+				E3C984CC1CA1483A000FB3BF /* Left */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E3C984C71CA147CB000FB3BF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E3C984C81CA147DD000FB3BF /* StoryboardInstantiable.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		E3C984CA1CA1482C000FB3BF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E3C984C11CA146FD000FB3BF /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		E3C984CB1CA14834000FB3BF /* Right */ = {
+			isa = PBXGroup;
+			children = (
+				E3C984C31CA14718000FB3BF /* RightViewController.swift */,
+				E3C984CD1CA14866000FB3BF /* RightViewController.storyboard */,
+				E3C984CF1CA1491B000FB3BF /* RightPresentationController.swift */,
+			);
+			name = Right;
+			sourceTree = "<group>";
+		};
+		E3C984CC1CA1483A000FB3BF /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				E3C984C51CA14724000FB3BF /* LeftViewController.swift */,
+			);
+			name = Left;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +286,7 @@
 			files = (
 				E3C9849D1CA14654000FB3BF /* LaunchScreen.storyboard in Resources */,
 				E3C9849A1CA14654000FB3BF /* Assets.xcassets in Resources */,
+				E3C984CE1CA14866000FB3BF /* RightViewController.storyboard in Resources */,
 				E3C984981CA14653000FB3BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3C984951CA14653000FB3BF /* ViewController.swift in Sources */,
 				E3C984931CA14653000FB3BF /* AppDelegate.swift in Sources */,
+				E3C984C61CA14724000FB3BF /* LeftViewController.swift in Sources */,
+				E3C984C91CA147DD000FB3BF /* StoryboardInstantiable.swift in Sources */,
+				E3C984C21CA146FD000FB3BF /* MainViewController.swift in Sources */,
+				E3C984D01CA1491B000FB3BF /* RightPresentationController.swift in Sources */,
+				E3C984C41CA14718000FB3BF /* RightViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
