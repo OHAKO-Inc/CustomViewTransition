@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if let window = window {
+            let bgColorView = UIView()
+            print(window.frame)
+            bgColorView.frame = window.frame
+            bgColorView.backgroundColor = UIColor.grayColor()
+            window.insertSubview(bgColorView, atIndex: 0)
+        }
+        
         return true
     }
 

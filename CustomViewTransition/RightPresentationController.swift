@@ -10,12 +10,20 @@ import UIKit
 
 class RightPresentationController: UIPresentationController {
     
-    private let dimingView = UIView()
+    private let dimmingView = UIView()
     
     override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
-        dimingView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
+        dimmingView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
+        dimmingView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(dimmingViewDidTap(_:)))]
     }
+    
+    func dimmingViewDidTap(sender: UITapGestureRecognizer) {
+        presentedViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    // MARK: UIPresentationController
     
     override func presentationTransitionWillBegin() {
         super.presentationTransitionWillBegin()
@@ -24,12 +32,12 @@ class RightPresentationController: UIPresentationController {
             return
         }
         
-        dimingView.frame = containerView.bounds
-        dimingView.alpha = 0.0
-        containerView.insertSubview(dimingView, atIndex: 0)
+        dimmingView.frame = containerView.bounds
+        dimmingView.alpha = 0.0
+        containerView.insertSubview(dimmingView, atIndex: 0)
         
         presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ (context) in
-            self.dimingView.alpha = 1.0
+            self.dimmingView.alpha = 1.0
             }, completion: nil
         )
     }
@@ -41,14 +49,14 @@ class RightPresentationController: UIPresentationController {
             return
         }
         
-        dimingView.removeFromSuperview()
+        dimmingView.removeFromSuperview()
     }
     
     
     override func dismissalTransitionWillBegin() {
         super.dismissalTransitionWillBegin()
         presentedViewController.transitionCoordinator()?.animateAlongsideTransition({ (context) in
-            self.dimingView.alpha = 0.0
+            self.dimmingView.alpha = 0.0
             }, completion: nil)
     }
     override func dismissalTransitionDidEnd(completed: Bool) {
@@ -56,7 +64,7 @@ class RightPresentationController: UIPresentationController {
         guard completed else {
             return
         }
-        dimingView.removeFromSuperview()
+        dimmingView.removeFromSuperview()
     }
    
     override func frameOfPresentedViewInContainerView() -> CGRect {

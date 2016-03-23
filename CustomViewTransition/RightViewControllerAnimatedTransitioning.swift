@@ -45,7 +45,7 @@ class RightViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimat
         
         let initialFrame = CGRectMake(containerView.bounds.width, 0.0, toView.bounds.width, toView.bounds.height)
         let finalFrame = transitionContext.finalFrameForViewController(toVC)
-        
+
         toView.frame = initialFrame
         containerView.addSubview(toView)
         
@@ -53,6 +53,9 @@ class RightViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimat
             transitionDuration(transitionContext),
             animations: {
                 toView.frame = finalFrame
+
+                transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.transform = CGAffineTransformMakeScale(0.95, 0.95)
+                
         }) { (finished: Bool) in
             if transitionContext.transitionWasCancelled() {
                 toView.removeFromSuperview()
@@ -72,6 +75,7 @@ class RightViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimat
             transitionDuration(transitionContext),
             animations: {
                 fromView.frame = finalFrame
+                transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.transform = CGAffineTransformIdentity
         }) { (finished: Bool) in
             if !transitionContext.transitionWasCancelled() {
                 fromView.removeFromSuperview()
