@@ -63,6 +63,6 @@ class RightPresentationController: UIPresentationController {
         guard let containerView = containerView else {
             return CGRectZero
         }
-        return CGRectMake(containerView.bounds.width / 4.0, containerView.bounds.height / 4.0, containerView.bounds.width / 2.0, containerView.bounds.height / 2.0)
+        return CGRectMake(containerView.bounds.width / 4.0, 0.0, containerView.bounds.width * 3.0 / 4.0, containerView.bounds.height)
     }
 }
