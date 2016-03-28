@@ -470,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomViewTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ohako.inc.CustomViewTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +482,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CustomViewTransition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ohako.inc.CustomViewTransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,6 +554,7 @@
 				E3C984B91CA14654000FB3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3C984BA1CA14654000FB3BF /* Build configuration list for PBXNativeTarget "CustomViewTransitionTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +563,7 @@
 				E3C984BC1CA14654000FB3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3C984BD1CA14654000FB3BF /* Build configuration list for PBXNativeTarget "CustomViewTransitionUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +572,7 @@
 				E3C984BF1CA14654000FB3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

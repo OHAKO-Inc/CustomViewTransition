@@ -10,14 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
     @IBAction func rightDidTap(sender: AnyObject) {
+        label.text = "right"
         let rightViewController = RightViewController.instantiate()
         rightViewController.modalPresentationStyle = .Custom
         rightViewController.transitioningDelegate = self
         presentViewController(rightViewController, animated: true, completion: nil)
     }
     @IBAction func leftDidTap(sender: AnyObject) {
-
+        label.text = "left"
     }
 }
 
