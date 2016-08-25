@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IDM-om-L5g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IDM-om-L5g">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -17,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4t-8m-YWV">
-                                <rect key="frame" x="280" y="289" width="40" height="21"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アラートなど" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4t-8m-YWV">
+                                <rect key="frame" x="249" y="289" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKZ-Qq-9hF">
-                                <rect key="frame" x="20" y="20" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                                <rect key="frame" x="263" y="525" width="75" height="30"/>
+                                <state key="normal" title="キャンセル"/>
                                 <connections>
                                     <action selector="backDidTap:" destination="IDM-om-L5g" eventType="touchUpInside" id="eJp-QZ-9Vy"/>
                                 </connections>
@@ -33,9 +32,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dKZ-Qq-9hF" firstAttribute="top" secondItem="bsG-Ud-Q8N" secondAttribute="bottom" id="ANL-v4-T5U"/>
+                            <constraint firstItem="4Re-CG-awK" firstAttribute="top" secondItem="dKZ-Qq-9hF" secondAttribute="bottom" constant="45" id="BRd-oa-n98"/>
                             <constraint firstItem="T4t-8m-YWV" firstAttribute="centerY" secondItem="xe6-Ca-Jo0" secondAttribute="centerY" id="Xe8-2h-zA5"/>
-                            <constraint firstItem="dKZ-Qq-9hF" firstAttribute="leading" secondItem="xe6-Ca-Jo0" secondAttribute="leading" constant="20" id="biQ-Z6-Bid"/>
+                            <constraint firstItem="dKZ-Qq-9hF" firstAttribute="centerX" secondItem="xe6-Ca-Jo0" secondAttribute="centerX" id="eVX-oS-yz0"/>
                             <constraint firstItem="T4t-8m-YWV" firstAttribute="centerX" secondItem="xe6-Ca-Jo0" secondAttribute="centerX" id="mla-UX-OU1"/>
                         </constraints>
                     </view>

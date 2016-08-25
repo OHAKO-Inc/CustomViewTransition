@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
@@ -16,34 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-hL-7e8">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-hL-7e8">
                                 <rect key="frame" x="20" y="20" width="30" height="30"/>
                                 <state key="normal" title="Left"/>
                                 <connections>
                                     <action selector="leftDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qiN-0t-Ljk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P29-bC-WWf">
-                                <rect key="frame" x="544" y="20" width="36" height="30"/>
-                                <state key="normal" title="Right"/>
-                                <connections>
-                                    <action selector="rightDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVd-JM-6Re"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-t1-k4z">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-t1-k4z">
                                 <rect key="frame" x="279" y="289" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P29-bC-WWf">
+                                <rect key="frame" x="255" y="285" width="90" height="30"/>
+                                <state key="normal" title="アラート表示"/>
+                                <connections>
+                                    <action selector="rightDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVd-JM-6Re"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qjf-t1-k4z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8ef-eG-vF0"/>
-                            <constraint firstItem="P29-bC-WWf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9XA-WM-onb"/>
                             <constraint firstItem="m8Y-hL-7e8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="FZQ-lz-X03"/>
                             <constraint firstItem="m8Y-hL-7e8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="JZV-Yp-52b"/>
-                            <constraint firstAttribute="trailing" secondItem="P29-bC-WWf" secondAttribute="trailing" constant="20" id="bgX-HD-MgN"/>
+                            <constraint firstItem="P29-bC-WWf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dpQ-8A-m0J"/>
+                            <constraint firstItem="P29-bC-WWf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gmO-di-F8L"/>
                             <constraint firstItem="Qjf-t1-k4z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nET-II-6e5"/>
                         </constraints>
                     </view>

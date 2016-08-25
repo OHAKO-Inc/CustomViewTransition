@@ -27,12 +27,12 @@ extension MainViewController: UIViewControllerTransitioningDelegate {
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
         return RightPresentationController(presentedViewController: presented, presentingViewController: presenting)
     }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return RightViewControllerAnimatedTransitioning(transitionType: .Presentation)
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return RightViewControllerAnimatedTransitioning(transitionType: .Dismissal)
-    }
+
+//    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return RightViewControllerAnimatedTransitioning(transitionType: .Presentation)
+//    }
+//
+//    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return RightViewControllerAnimatedTransitioning(transitionType: .Dismissal)
+//    }
 }
