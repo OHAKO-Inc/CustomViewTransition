@@ -22,9 +22,7 @@ class RightViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimat
     }
 
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        guard let containerView = transitionContext.containerView() else {
-            return
-        }
+        let containerView = transitionContext.containerView()
         
         switch transitionType {
         case .Presentation:
