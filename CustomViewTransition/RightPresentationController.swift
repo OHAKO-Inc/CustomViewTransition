@@ -12,7 +12,7 @@ class RightPresentationController: UIPresentationController {
     
     private let dimmingView = UIView()
     
-    override init(presentedViewController: UIViewController, presentingViewController: UIViewController) {
+    override init(presentedViewController: UIViewController, presentingViewController: UIViewController?) {
         super.init(presentedViewController: presentedViewController, presentingViewController: presentingViewController)
         dimmingView.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.6)
         dimmingView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(dimmingViewDidTap(_:)))]
