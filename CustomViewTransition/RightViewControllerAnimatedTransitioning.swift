@@ -10,76 +10,76 @@ import UIKit
 
 class RightViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
 
-    private let transitionType: AnimatedTransitioningType
+    fileprivate let transitionType: AnimatedTransitioningType
     
     init(transitionType: AnimatedTransitioningType) {
         self.transitionType = transitionType
         super.init()
     }
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView()
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let containerView = transitionContext.containerView
         
         switch transitionType {
-        case .Presentation:
+        case .presentation:
             presentationTransition(containerView, transitionContext: transitionContext)
             
-        case .Dismissal:
+        case .dismissal:
             dismissalTransition(containerView, transitionContext: transitionContext)
 
         }
         
     }
     
-    private func presentationTransition(containerView: UIView, transitionContext: UIViewControllerContextTransitioning) {
-        guard let toVC = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey),
-            let toView = transitionContext.viewForKey(UITransitionContextToViewKey) else {
+    fileprivate func presentationTransition(_ containerView: UIView, transitionContext: UIViewControllerContextTransitioning) {
+        guard let toVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to),
+            let toView = transitionContext.view(forKey: UITransitionContextViewKey.to) else {
                 return
         }
         
-        let initialFrame = CGRectMake(containerView.bounds.width, 0.0, toView.bounds.width, toView.bounds.height)
-        let finalFrame = transitionContext.finalFrameForViewController(toVC)
+        let initialFrame = CGRect(x: containerView.bounds.width, y: 0.0, width: toView.bounds.width, height: toView.bounds.height)
+        let finalFrame = transitionContext.finalFrame(for: toVC)
 
         toView.frame = initialFrame
         containerView.addSubview(toView)
         
-        UIView.animateWithDuration(
-            transitionDuration(transitionContext),
+        UIView.animate(
+            withDuration: transitionDuration(using: transitionContext),
             animations: {
                 toView.frame = finalFrame
 
-                transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.view.transform = CGAffineTransformMakeScale(0.95, 0.95)
+                transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)?.view.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
                 
-        }) { (finished: Bool) in
-            if transitionContext.transitionWasCancelled() {
+        }, completion: { (finished: Bool) in
+            if transitionContext.transitionWasCancelled {
                 toView.removeFromSuperview()
             }
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }) 
     }
  
-    private func dismissalTransition(containerView: UIView, transitionContext: UIViewControllerContextTransitioning) {
-        guard let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey) else {
+    fileprivate func dismissalTransition(_ containerView: UIView, transitionContext: UIViewControllerContextTransitioning) {
+        guard let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from) else {
             return
         }
         
-        let finalFrame = CGRectMake(containerView.bounds.width, 0.0, fromView.bounds.width, fromView.bounds.height)
+        let finalFrame = CGRect(x: containerView.bounds.width, y: 0.0, width: fromView.bounds.width, height: fromView.bounds.height)
         
-        UIView.animateWithDuration(
-            transitionDuration(transitionContext),
+        UIView.animate(
+            withDuration: transitionDuration(using: transitionContext),
             animations: {
                 fromView.frame = finalFrame
-                transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)?.view.transform = CGAffineTransformIdentity
-        }) { (finished: Bool) in
-            if !transitionContext.transitionWasCancelled() {
+                transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)?.view.transform = CGAffineTransform.identity
+        }, completion: { (finished: Bool) in
+            if !transitionContext.transitionWasCancelled {
                 fromView.removeFromSuperview()
             }
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
-        }
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }) 
     }
     
 }

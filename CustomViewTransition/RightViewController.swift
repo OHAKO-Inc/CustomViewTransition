@@ -10,8 +10,8 @@ import UIKit
 
 class RightViewController: UIViewController {
 
-    @IBAction func backDidTap(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func backDidTap(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
