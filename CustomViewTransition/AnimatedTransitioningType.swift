@@ -9,6 +9,6 @@
 import Foundation
 
 enum AnimatedTransitioningType {
-    case Presentation
-    case Dismissal
+    case presentation
+    case dismissal
 }

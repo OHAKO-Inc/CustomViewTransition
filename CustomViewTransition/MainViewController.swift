@@ -11,28 +11,28 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    @IBAction func rightDidTap(sender: AnyObject) {
+    @IBAction func rightDidTap(_ sender: AnyObject) {
         label.text = "right"
         let rightViewController = RightViewController.instantiate()
-        rightViewController.modalPresentationStyle = .Custom
+        rightViewController.modalPresentationStyle = .custom
         rightViewController.transitioningDelegate = self
-        presentViewController(rightViewController, animated: true, completion: nil)
+        present(rightViewController, animated: true, completion: nil)
     }
-    @IBAction func leftDidTap(sender: AnyObject) {
+    @IBAction func leftDidTap(_ sender: AnyObject) {
         label.text = "left"
     }
 }
 
 extension MainViewController: UIViewControllerTransitioningDelegate {
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController?, sourceViewController source: UIViewController) -> UIPresentationController? {
-        return RightPresentationController(presentedViewController: presented, presentingViewController: presenting)
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return RightPresentationController(presentedViewController: presented, presenting: presenting)
     }
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return RightViewControllerAnimatedTransitioning(transitionType: .Presentation)
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return RightViewControllerAnimatedTransitioning(transitionType: .presentation)
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return RightViewControllerAnimatedTransitioning(transitionType: .Dismissal)
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return RightViewControllerAnimatedTransitioning(transitionType: .dismissal)
     }
 }

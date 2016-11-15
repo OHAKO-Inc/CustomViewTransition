@@ -34,7 +34,7 @@ class CustomViewTransitionUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
-        let staticText = app.staticTexts.elementBoundByIndex(0)
+        let staticText = app.staticTexts.element(boundBy: 0)
 
         app.buttons["Right"].tap()
         app.buttons["Back"].tap()
