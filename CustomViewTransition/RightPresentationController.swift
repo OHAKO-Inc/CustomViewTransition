@@ -18,7 +18,7 @@ class RightPresentationController: UIPresentationController {
         dimmingView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(dimmingViewDidTap(_:)))]
     }
     
-    func dimmingViewDidTap(_ sender: UITapGestureRecognizer) {
+    @objc func dimmingViewDidTap(_ sender: UITapGestureRecognizer) {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     
